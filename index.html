@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thiệp cưới Thu Hương & Anh Đức</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Be+Vietnam+Pro:wght@300;400;600&display=swap">
+<style>
+:root{--bg:#fff;--bg2:#faf3f3;--ink:#1d1416;--mute:#6f5f62;--red:#c8102e;--line:#ecd9db;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{color-scheme:light}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:300 16px/1.7 'Be Vietnam Pro',system-ui,sans-serif}
+h1,h2,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:500}
+section{padding:72px 24px;max-width:860px;margin:0 auto;text-align:center}
+h2{font-size:clamp(28px,6vw,40px);margin:0 0 8px}
+.sub{color:var(--mute);margin:0 0 36px}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:48px 24px;position:relative;overflow:hidden;background:var(--bg2)}
+.hero::before{content:"";position:absolute;inset:0 0 auto 0;height:10px;background:var(--red)}
+.inv{letter-spacing:.2em;font-size:13px;color:var(--mute)}
+.date{font-family:'Playfair Display',serif;font-weight:700;color:var(--red);font-size:clamp(80px,22vw,140px);line-height:1.05;margin:8px 0 6px;letter-spacing:-.02em;font-variant-numeric:lining-nums}
+.date small{display:block;font-size:.2em;letter-spacing:.35em;font-weight:500;margin-top:6px;letter-spacing:.3em}
+.names{font-size:clamp(28px,6.5vw,44px);margin:14px 0 4px}
+.names i{color:var(--red);font-style:italic;padding:0 .2em}
+.place{color:var(--mute)}
+.btn{display:inline-block;margin-top:28px;padding:13px 30px;border:1.5px solid var(--red);color:var(--red);background:none;border-radius:999px;font:600 15px 'Be Vietnam Pro',sans-serif;text-decoration:none;cursor:pointer;transition:background .2s,color .2s}
+.btn:hover,.btn:focus-visible{background:var(--red);color:#fff;outline:none}
+.btn.solid{background:var(--red);color:#fff}
+.alt{background:var(--bg2);max-width:none}
+.alt>div{max-width:860px;margin:0 auto}
+.count{display:flex;justify-content:center;gap:clamp(12px,4vw,36px)}
+.count div{min-width:70px}.count b{display:block;font:700 clamp(36px,9vw,60px)/1.1 'Playfair Display',serif;color:var(--red)}
+.count span{font-size:13px;color:var(--mute)}
+.count b{font-variant-numeric:lining-nums}
+.inv{font-size:11px}
+.env{position:relative;width:min(100%,520px);margin:0 auto}
+.env::before{content:"";position:absolute;inset:18px -10px -14px 10px;background:var(--red);transform:rotate(3deg);border-radius:6px}
+.env::after{content:"";position:absolute;inset:8px 8px -6px -8px;background:#fff;border:1px solid var(--line);transform:rotate(-2.5deg);border-radius:6px}
+.invcard{position:relative;z-index:1;background:#fff;border-radius:6px;padding:44px 20px 40px;box-shadow:0 18px 40px rgba(200,16,46,.18),inset 0 0 0 10px #fff,inset 0 0 0 11px var(--red)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;text-align:left}
+.card{border:1px solid var(--line);border-top:4px solid var(--red);padding:24px;background:var(--bg)}
+.card h3{margin:0 0 6px;font:600 17px 'Be Vietnam Pro',sans-serif}.card p{margin:2px 0;color:var(--mute)}
+.card .t{font:500 30px 'Playfair Display',serif;color:var(--ink)}
+.album{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.album .ph{aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--mute);background:linear-gradient(135deg,var(--bg2),var(--line));overflow:hidden}
+.album .ph:nth-child(2),.album .ph:nth-child(5){background:linear-gradient(135deg,var(--red),#7d0a1c);color:#fff}
+.album img{width:100%;height:100%;object-fit:cover}
+form{max-width:480px;margin:0 auto;text-align:left;display:grid;gap:14px}
+label{font-size:14px;font-weight:600}
+input,select,textarea{width:100%;padding:12px 14px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;border-radius:6px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--red);outline-offset:1px}
+#thanks{display:none;color:var(--red);font:500 22px 'Playfair Display',serif;text-align:center}
+.music{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:48px;height:48px;border-radius:50%;border:0;background:var(--red);color:#fff;font-size:20px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25);z-index:5}
+.music.on{animation:spin 4s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+footer{padding:40px 24px 56px;text-align:center;color:var(--mute);font-size:14px}
+@media (prefers-reduced-motion:reduce){.music.on{animation:none}html{scroll-behavior:auto}}
+@media (max-width:520px){.album{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="env"><div class="invcard">
+  <div class="inv">TRÂN TRỌNG KÍNH MỜI BẠN ĐẾN DỰ LỄ CƯỚI</div>
+  <div class="date">17<small>THÁNG 04 · 2027</small></div>
+  <h1 class="names">Thu Hương<i>&</i>Anh Đức</h1>
+  <div class="place">Khách sạn Cầu Am, Hà Đông, Hà Nội</div>
+  <a class="btn solid" href="#rsvp">Xác nhận tham dự</a>
+  </div></div>
+</header>
+
+<section>
+  <h2>Chúng mình sắp về chung một nhà</h2>
+  <p class="sub">Sự hiện diện của bạn là niềm vui lớn nhất của hai gia đình.</p>
+  <div class="count" id="count" aria-live="off">
+    <div><b id="d">0</b><span>ngày</span></div><div><b id="h">0</b><span>giờ</span></div><div><b id="m">0</b><span>phút</span></div><div><b id="s">0</b><span>giây</span></div>
+  </div>
+</section>
+
+<section class="alt"><div>
+  <h2>Thông tin buổi lễ</h2>
+  <p class="sub">Thứ Bảy, ngày 17 tháng 4 năm 2027</p>
+  <div class="cards">
+    <div class="card"><h3>Đón khách</h3><p class="t">17:00</p><p>Chụp ảnh cùng cô dâu chú rể</p></div>
+    <div class="card"><h3>Tiệc cưới</h3><p class="t">18:00</p><p>Khách sạn Cầu Am, Hà Đông, Hà Nội</p></div>
+  </div>
+  <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Kh%C3%A1ch+s%E1%BA%A1n+C%E1%BA%A7u+Am+H%C3%A0+%C4%90%C3%B4ng+H%C3%A0+N%E1%BB%99i">Xem đường đi trên Google Maps</a>
+</div></section>
+
+<section>
+  <h2>Album ảnh cưới</h2>
+  <p class="sub">Những khoảnh khắc của hai chúng mình</p>
+  <div class="album" id="album"></div>
+</section>
+
+<section class="alt" id="rsvp"><div>
+  <h2>Bạn sẽ đến chứ?</h2>
+  <p class="sub">Cho chúng mình biết để chuẩn bị chu đáo nhé.</p>
+  <form id="form">
+    <label>Họ và tên<input name="name" required autocomplete="name"></label>
+    <label>Bạn tham dự cùng
+      <select name="n"><option>1 người</option><option>2 người</option><option>3 người</option><option>4 người trở lên</option></select></label>
+    <label>Bạn là khách của
+      <select name="side"><option>Nhà gái (Thu Hương)</option><option>Nhà trai (Anh Đức)</option></select></label>
+    <label>Lời chúc<textarea name="wish" rows="3"></textarea></label>
+    <button class="btn solid" type="submit">Gửi xác nhận</button>
+    <button class="btn" type="button" id="no">Rất tiếc, mình không đến được</button>
+  </form>
+  <p id="thanks"></p>
+</div></section>
+
+<footer><div class="serif" style="font-size:22px;color:var(--ink)">Thu Hương & Anh Đức</div>17.04.2027 · Hà Nội</footer>
+
+<button class="music" id="music" aria-label="Bật hoặc tắt nhạc nền" title="Nhạc nền">♪</button>
+<audio id="bgm" loop></audio>
+
+<script>
+/* ===== CẤU HÌNH: sửa ở đây ===== */
+var CONFIG={
+  date:"2027-04-17T18:00:00+07:00",
+  photos:[],        // dán ảnh dạng data:image/jpeg;base64,... hoặc link ảnh nếu tự host
+  music:"",         // link/data file mp3 nhạc nền
+  rsvpUrl:""        // link Google Form (nếu có) để nhận phản hồi thật
+};
+/* ================================= */
+(function(){
+  var t=new Date(CONFIG.date).getTime(),ids=["d","h","m","s"].map(function(i){return document.getElementById(i)});
+  function tick(){var x=Math.max(0,t-Date.now());var v=[Math.floor(x/864e5),Math.floor(x/36e5)%24,Math.floor(x/6e4)%60,Math.floor(x/1e3)%60];v.forEach(function(n,i){ids[i].textContent=n})}
+  tick();setInterval(tick,1000);
+  var al=document.getElementById("album");
+  for(var i=0;i<6;i++){var d=document.createElement("div");d.className="ph";
+    if(CONFIG.photos[i]){var im=document.createElement("img");im.src=CONFIG.photos[i];im.alt="Ảnh cưới "+(i+1);d.appendChild(im)}else d.textContent="Ảnh "+(i+1);
+    al.appendChild(d)}
+  var a=document.getElementById("bgm"),b=document.getElementById("music");
+  b.onclick=function(){
+    if(!CONFIG.music){alert("Chưa gắn file nhạc nền.");return}
+    if(!a.src)a.src=CONFIG.music;
+    if(a.paused){a.play().then(function(){b.classList.add("on")}).catch(function(){})}else{a.pause();b.classList.remove("on")}
+  };
+  var th=document.getElementById("thanks"),f=document.getElementById("form");
+  function done(msg){f.style.display="none";th.style.display="block";th.textContent=msg}
+  function save(v){try{var k=JSON.parse(localStorage.getItem("rsvp")||"[]");k.push(v);localStorage.setItem("rsvp",JSON.stringify(k))}catch(e){}}
+  f.onsubmit=function(e){e.preventDefault();var d=Object.fromEntries(new FormData(f));d.come=true;save(d);
+    done("Cảm ơn "+d.name+"! Hẹn gặp bạn ngày 17/04/2027.");
+    if(CONFIG.rsvpUrl)window.open(CONFIG.rsvpUrl,"_blank","noopener")};
+  document.getElementById("no").onclick=function(){var n=f.name.value.trim();if(!n){f.name.focus();return}
+    save({name:n,come:false,wish:f.wish.value});done("Cảm ơn "+n+" đã báo cho chúng mình. Chúc bạn luôn vui khỏe!")};
+})();
+</script>
+</body>
+</html>
